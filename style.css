@@ -15,7 +15,7 @@ body{
     top: 50%;
     transform: translate(-50%,-50%);
     background-color: rgba(255, 255, 255, 0.8);
-    width: fit-content;
+    width: 75%;
     padding : 15px 40px;
     border-radius : 25px;
     border: 2px solid #5272f286;
@@ -32,7 +32,7 @@ body{
 .container-1 button{
     height: 45px;
     width: 45px;
-    border-radius : 25px;
+    border-radius : 45px;
     outline: none;
     border : none;
     background-color: #5272f291;
@@ -52,11 +52,6 @@ body{
     margin: 10px 30px;
     text-align: left
 }
-.mainweathericon{
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-}
 h1{
     margin-bottom: 10px;
 }
@@ -71,4 +66,7 @@ p{
 }
 .weather{
     display : none;
+}
+#inputcity{
+    width :75%;
 }
