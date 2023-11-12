@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' />
+</head>
+<body>
+    <div class="container-1">
+        <div class="search">
+            <input id="inputcity"type="text" Placeholder="Enter City"required>
+            <button onclick="checkweather()"><image height="30px" width="30px" src="image/search.png"></button>
+        </div>
+        <div id="weather" class="weather">
+            <image style="width:200px; height:200px; margin: 0;"class="mainweathericon" src="#"></image>
+            <h1 id="temcmt">Sunny</h1>
+            <h2 id="temp">22.1 °C</h2>
+            <div class="bottom">
+                <div class="humidity">
+                    <image style="margin-right: 15px"class="humidityicon" src="image/weather/humidity.png"></image>
+                    <div>
+                    <p style="font-size: 22px" id="humidityval"class="humidityval">21%</p>
+                    <p>Humidity</p>
+                    </div>
+                    
+                </div>
+                <div class="wind">
+                    <div>
+                        <image style="margin-right: 15px" class="windicon"src="image/weather/wind.png"></image>
+                    </div>
+                   <div>
+                        <p style="font-size: 22px"class="windval" id="windval">21 Km/hr</p>
+                        <p>Wind Speed</p>
+                   </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
