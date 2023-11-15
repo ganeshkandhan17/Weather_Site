@@ -10,7 +10,7 @@
 
 <h3>🚀 Usage:</h3>
 <ol>
-  <li>Clone the repository: git clone https://github.com/ganeshkandhan17/weather-forecast.git</li>
+  <li>Clone the repository: git clone https://github.com/ganeshkandhan17/weather_Site.git</li>
   <li>Replace API key in script.js</li>
   <li>Open index.html in your preferred browser.</li>
   <li>Enter a city to view the weather forecast.</li>
