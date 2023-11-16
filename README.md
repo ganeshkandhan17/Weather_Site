@@ -14,7 +14,7 @@
   <li>Replace API key in script.js</li>
   <li>Open index.html in your preferred browser.</li>
   <li>Enter a city to view the weather forecast.</li>
-</ol
+</ol>
   
 <h3>🛠️ Tech Stack:</h3>
 
