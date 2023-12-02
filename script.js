@@ -1,6 +1,6 @@
 
 var apikey=""
-var url="http://api.weatherapi.com/v1/current.json?"
+var url="https://api.weatherapi.com/v1/current.json?"
 // var q="ooty"
 async function checkweather(){
     var q=document.getElementById("inputcity").value
