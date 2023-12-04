@@ -3,42 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <title>Weather Site</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' />
+    
 </head>
 <body>
-    <div class="container-1">
-        <div class="search">
-            <input id="inputcity" type="text" Placeholder="Enter City"required>
-            <button onclick="checkweather()"><image height="30px" width="30px" src="image/search.png"></button>
+        <!-- <div class="container3">
+            <span onclick="this.parentElement.remove()">x</span><br>
+            <img src="image/warning.png">
+            <h1>City Not Found</h1>
+        </div> -->
+
+    <div class="container1">
+        <div class="container2">
+            <input class="input" type="text">
+            <img id="img"width="30px" src="image/search.png">
         </div>
-        <div id="weather" class="weather">
-            <image style="width:200px; height:200px; margin: 0;"class="mainweathericon" src="#"></image>
-            <h1 id="temcmt">Sunny</h1>
-            <h2 id="temp">22.1 °C</h2>
+    <div class="weather">
+            
+            <img class="weatherimg"src="image/weather/heavy-rain.png">
+            
+            <h1 class="comment">Sunny</h1>
+            <p class="temperature"><b>32 °C</b></p>
             <div class="bottom">
-                <div class="humidity">
-                    <image style="margin-right: 15px"class="humidityicon" src="image/weather/humidity.png"></image>
-                    <div>
-                    <p style="font-size: 22px" id="humidityval"class="humidityval">21%</p>
-                    <p>Humidity</p>
+                <div class="flex1">
+                    <img src="image/weather/humidity.png">
+                    <div class="content">
+                        <p>Humidity</p>
+                        <p>32 %</p>
                     </div>
-                    
                 </div>
-                <div class="wind">
-                    <div>
-                        <image style="margin-right: 15px" class="windicon"src="image/weather/wind.png"></image>
+                <div class="flex2">
+                    <img src="image/weather/wind.png">
+                    <div class="content">
+                        <p>Wind</p>
+                        <p>32 Km/hr</p>
                     </div>
-                   <div>
-                        <p style="font-size: 22px"class="windval" id="windval">21 Km/hr</p>
-                        <p>Wind Speed</p>
-                   </div>
-                   
                 </div>
             </div>
-        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
