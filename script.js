@@ -12,11 +12,11 @@ img.addEventListener("click",function(){
         weather.style.transitionDelay="0s"
         weather.classList.toggle("open");
         container1.classList.toggle("trans");
+        finddweather();
         setTimeout(function(){
-            finddweather();
             weather.classList.toggle("open");
             container1.classList.toggle("trans");
-        },500);
+        },600);
         
     }
 });
