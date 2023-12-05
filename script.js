@@ -1,5 +1,11 @@
 let img=document.querySelector("#img")
-img.addEventListener("click",function(){
+let body=document.querySelector(".input").addEventListener("keydown",function(e){
+    if(e.key=="Enter"){
+        main();
+    }
+})
+img.addEventListener("click",main);
+function main(){
     weather=document.querySelector(".weather");
     container1=document.querySelector(".container1");
     if(weather.classList.contains("open")==false){
@@ -19,7 +25,7 @@ img.addEventListener("click",function(){
         },600);
         
     }
-});
+}
 
 // No city found alert
 function customalert(){
