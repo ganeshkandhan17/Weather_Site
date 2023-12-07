@@ -23,6 +23,7 @@ body{
 }
 .container1.trans{
     height: 500px;
+    padding-bottom: 30px;
 }
 .container2{
     display: flex;
