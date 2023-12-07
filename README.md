@@ -27,6 +27,8 @@
 
 <h3>📸 Screenshots:</h3>
 
-![image](https://github.com/ganeshkandhan17/Weather_Site/assets/87404827/0ac78e63-ecec-4c22-be83-1d6e1443a822)
-![image](https://github.com/ganeshkandhan17/Weather_Site/assets/87404827/849bf9f8-fe0a-4011-a136-e94469c205d4)
+![image](https://github.com/ganeshkandhan17/Weather_Site/assets/87404827/eba9de8e-ab8f-4afd-87fd-3d02af19797b)
+
+![image](https://github.com/ganeshkandhan17/Weather_Site/assets/87404827/15fb9bc6-b276-42d7-ae8c-ab34e04bd519)
+
 
