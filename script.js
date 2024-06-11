@@ -44,20 +44,32 @@ function finddweather(){
     var url="https://api.weatherapi.com/v1/current.json?"
     async function findandshow(){
         var q=document.querySelector(".input").value
-        const response= await fetch(`${url}key=${apikey}&q=${q}`);
-        if(response.status==400){
-            customalert();
+        let response= await fetch(`${url}key=${apikey}&q=${q}`)
+        .then(data=>data.json())
+        .then((data)=>{
+            console.log(data.error)
+            if(data.error){
+                customalert();
+            }
+            else{
+            console.log(data);
+            document.querySelector(".mainweatherimg").src=data.current.condition.icon;
+            document.querySelector(".comment").innerHTML=data.current.condition.text;
+            document.querySelector(".temp").innerHTML=Math.round(data.current.temp_c) + " °C";
+            document.querySelector(".humval").innerHTML=data.current.humidity+ " %";
+            document.querySelector(".winval").innerHTML=data.current.wind_kph+ " Km/hr";
+            }
         }
-        else{
-        const data = await response.json();
-        console.log(data);
-        document.querySelector(".mainweatherimg").src=data.current.condition.icon;
-        document.querySelector(".comment").innerHTML=data.current.condition.text;
-        document.querySelector(".temp").innerHTML=Math.round(data.current.temp_c) + " °C";
-        document.querySelector(".humval").innerHTML=data.current.humidity+ " %";
-        document.querySelector(".winval").innerHTML=data.current.wind_kph+ " Km/hr";
-        }
-        
+    )
     }
     findandshow();
 }
+let input=document.querySelector(".input");
+input.addEventListener("input",function(){
+    let inval=input.value;
+     fir=inval.charAt(0);
+     fir=fir.toUpperCase();
+     rest=inval.slice(1);
+     rest=rest.toLowerCase();
+     input.value=fir+rest;
+})
