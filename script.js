@@ -5,12 +5,12 @@ let body=document.querySelector(".input").addEventListener("keydown",function(e)
     }
 })
 img.addEventListener("click",main);
-function main(){
+async function main(){
     weather=document.querySelector(".weather");
     container1=document.querySelector(".container1");
     if(weather.classList.contains("open")==false){
         weather.style.transitionDelay="0.4s"
-        finddweather()
+        await finddweather()
         weather.classList.toggle("open");
         container1.classList.toggle("trans");
     }
@@ -39,31 +39,34 @@ close.addEventListener("click",function(){
     customalert();
 })
 
-function finddweather(){
+async function finddweather(){
     var apikey="edd892fa5ac640ffb5e101714231311"
     var url="https://api.weatherapi.com/v1/current.json?"
-    async function findandshow(){
-        var q=document.querySelector(".input").value
-        let response= await fetch(`${url}key=${apikey}&q=${q}`)
-        .then(data=>data.json())
-        .then((data)=>{
-            console.log(data.error)
-            if(data.error){
-                customalert();
-            }
-            else{
-            console.log(data);
-            document.querySelector(".mainweatherimg").src=data.current.condition.icon;
-            document.querySelector(".comment").innerHTML=data.current.condition.text;
-            document.querySelector(".temp").innerHTML=Math.round(data.current.temp_c) + " °C";
-            document.querySelector(".humval").innerHTML=data.current.humidity+ " %";
-            document.querySelector(".winval").innerHTML=data.current.wind_kph+ " Km/hr";
-            }
-        }
-    )
+    var q=document.querySelector(".input").value
+    await fetch(`${url}key=${apikey}&q=${q}`)
+    .then(data=>data.json())
+    .then((data)=>{
+        findandshow(data);
     }
-    findandshow();
+)
+    
 }
+
+function findandshow(data){
+    console.log(data.error)
+    if(data.error){
+        customalert();
+    }
+    else{
+    console.log(data);
+    document.querySelector(".mainweatherimg").src=data.current.condition.icon;
+    document.querySelector(".comment").innerHTML=data.current.condition.text;
+    document.querySelector(".temp").innerHTML=Math.round(data.current.temp_c) + " °C";
+    document.querySelector(".humval").innerHTML=data.current.humidity+ " %";
+    document.querySelector(".winval").innerHTML=data.current.wind_kph+ " Km/hr";
+    }
+}
+
 let input=document.querySelector(".input");
 input.addEventListener("input",function(){
     let inval=input.value;
